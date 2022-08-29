@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Calculadora</title>
+</head>
+
+<body>
+
+    <script>
+
+        var num1 = parseInt(prompt('Digite um número: '))
+        var num2 = parseInt(prompt('Digite outro número: '))
+        var resultado = 0
+
+        do {
+            var operacao = parseInt(prompt('Digite 1- SOMA || 2- SUBTRAÇÃO || 3- MULTIPLICAÇÃO || 4- DIVISÃO'))
+
+        } while (operacao != 1 && operacao != 2 && operacao != 3 && operacao != 4) {
+
+            switch (operacao) {
+                case 1:
+                    resultado = (num1 + num2)
+                    document.write(`A adição entre: ${num1} + ${num2} = ${resultado}`)
+                    break
+                case 2:
+                    resultado = (num1 - num2)
+                    document.write(`A subtração entre: ${num1} - ${num2} = ${resultado}`)
+                    break
+
+                case 3:
+                    resultado = (num1 * num2)
+                    document.write(`A multiplicação entre: ${num1} x ${num2} = ${resultado}`)
+                    break
+
+                case 4:
+                    resultado = (num1 / num2)
+                    document.write(`A divisão entre: ${num1} / ${num2} = ${resultado}`)
+                    break
+
+                default:
+                    document.write(`Operação Inválida!`)
+                    break
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
